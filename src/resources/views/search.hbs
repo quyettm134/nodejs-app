@@ -1,1 +1,32 @@
-<h1>Search Page</h1>
+<div class="mt-4">
+    <form method="POST" action="">
+        <div class="mb-3">
+            <label for="ref-input-field" class="form-label">Find something...</label>
+            <input type="text" name="keyword" class="form-control" id="ref-input-field">
+            {{!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> --}}
+        </div>
+
+        <div class="mb-3">
+            <label for="subjects" class="form-label">Subjects</label>
+            <select name="subjects" id="subjects" class="form-control">
+                <option value="">-- Choose a subject --</option>
+                <option value="reactjs">ReactJS</option>
+                <option value="nodejs">NodeJS</option>
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+                <option value="c++">C++</option>
+            </select>
+        </div>
+
+        {{!-- <div class="mb-3">
+            <label for="name-input-field" class="form-label">Name</label>
+            <input type="text" name="fullname" class="form-control" id="name-input-field">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-check-label" for="age-input-field">Age</label>
+            <input type="text" name="age" class="form-control" id="age-input-field">
+        </div> --}}
+        <button type="submit" class="btn btn-success">Search</button>
+    </form>
+</div>
