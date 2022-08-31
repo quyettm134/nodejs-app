@@ -7,8 +7,7 @@ const User = new Schema({
     age: Number,
     gender: String,
     avatar: String,
-    created_at: {type: Date, default: Date.now()},
-    updated_at: {type: Date, default: Date.now()}
+    description: String
 })
 
 module.exports = mongoose.model('User', User)
