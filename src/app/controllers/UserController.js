@@ -1,12 +1,12 @@
 const Users = require('../models/User')
-const { multipleDoc } = require('../../utils/mongoose')
+const { multipleDoc, singleDoc } = require('../../utils/mongoose')
 
 class UserController {
     // GET 
     index(req, res, next) {
         Users.find({})
             .then(users => {
-                res.render('user', {
+                res.render('users', {
                     users: multipleDoc(users)
                 })
             })
@@ -15,6 +15,16 @@ class UserController {
 
     show(req, res) {
         res.render('user')
+    }
+
+    details(req, res, next) {
+        Users.findOne({ slug: req.params.slug })
+            .then(user => {
+                res.render('details', {
+                    user: singleDoc(user)
+                })
+            })
+            .catch(err => next(err))
     }
 
 }

@@ -1,0 +1,70 @@
+<div class="container" style="margin-top: 20px;">
+    <div class="team-single">
+        <div class="row">
+            {{#with user}}
+            <div class="col-lg-4 col-md-5 xs-margin-30px-bottom">
+                <div class="team-single-img">
+                    <img src="{{this.avatar}}" style="height: 315px; width: 315px;" alt="avatar">
+                </div>
+                <div class="bg-light-gray padding-30px-all md-padding-25px-all sm-padding-20px-all text-center">
+                    <h4 class="margin-10px-bottom font-size24 md-font-size22 sm-font-size20 font-weight-600">{{this.name}}</h4>
+                    <div class="margin-20px-top team-single-icons">
+                        <ul class="no-margin">
+                            <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                             <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="javascript:void(0)"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-7">
+                <div class="team-single-text padding-50px-left sm-no-padding-left">
+                    <h4 class="font-size38 sm-font-size32 xs-font-size30">About me:</h4>
+                    <p class="no-margin-bottom">{{this.description}}</p>
+                    <div class="contact-info-section margin-40px-tb">
+                        <ul class="list-style9 no-margin">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-5 col-5">
+                                        <i class="fas fa-graduation-cap text-orange"></i>
+                                        <strong class="margin-10px-left text-orange">Degree:</strong>
+                                    </div>
+                                    <div class="col-md-7 col-7">
+                                        <p>Master's Degrees</p>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-5 col-5">
+                                        <i class="fas fa-calendar text-orange"></i>
+                                        <strong class="margin-10px-left text-orange">Age:</strong>
+                                    </div>
+                                    <div class="col-md-7 col-7">
+                                        <p>{{this.age}}</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-5 col-5">
+                                        <i class="fas fa-venus-mars text-orange"></i>
+                                        <strong class="margin-10px-left text-orange">Gender:</strong>
+                                    </div>
+                                    <div class="col-md-7 col-7">
+                                        <p>{{this.gender}}</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {{/with}}
+        </div>
+    </div>
+</div>

@@ -7,7 +7,8 @@ const User = new Schema({
     age: Number,
     gender: String,
     avatar: String,
-    description: String
+    description: String,
+    slug: String
 })
 
 module.exports = mongoose.model('User', User)
