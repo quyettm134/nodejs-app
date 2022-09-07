@@ -1,0 +1,26 @@
+<div class="mt-4">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col" colspan="1">Name</th>
+                <th scope="col" colspan="1">Age</th>
+                <th scope="col" colspan="2">Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each users}}
+            <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td>{{this.name}}</td>
+                <td>{{this.age}}</td>
+                <td>{{this.gender}}</td>
+                <td>
+                    <a href="/management/{{this._id}}/edit"><button type="button" class="btn btn-primary">Update</button></a>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

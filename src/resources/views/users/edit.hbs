@@ -1,0 +1,33 @@
+<div class="mt-4">
+    <h3>Update user</h3>
+
+    <form class="mt-4" method="POST" action="/management/{{user._id}}?_method=PUT">
+        {{#with user}}
+        <div class="form-group">
+            <label for="name"><b>Name</b></label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="{{this.name}}">
+        </div>
+
+        <div class="form-group mt-4">
+            <label for="age"><b>Age</b></label>
+            <input type="text" class="form-control" id="age" name="age" placeholder="{{this.age}}">
+        </div>
+
+        <div class="form-group mt-4">
+            <label for="gender"><b>Gender</b></label>
+            <input type="text" class="form-control" id="gender" name="gender" placeholder="{{this.gender}}">
+        </div>
+
+        <div class="form-group mt-4">
+            <label for="description"><b>Description</b></label>
+            <textarea class="form-control" id="description" name="description" placeholder="{{this.description}}"></textarea>
+        </div>
+
+        <div class="form-group mt-4">
+            <label for="avatar"><b>Avatar</b></label>
+            <input type="text" class="form-control" id="avatar" name="avatar" placeholder="{{this.avatar}}">
+        </div>
+        {{/with}}
+        <button type="submit" class="btn btn-primary mt-4">Update</button>
+    </form>
+</div>
