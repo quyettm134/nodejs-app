@@ -20,9 +20,13 @@ class ManagementrController {
 
     update(req, res, next) {
         Users.updateOne({ _id: req.params.id }, req.body)
-            .then(() => {
-                res.redirect('/management')
-            })
+            .then(() => res.redirect('/management'))
+            .catch(err => next(err))
+    }
+
+    remove(req, res, next) {
+        Users.deleteOne({ _id: req.params.id })
+            .then(() => res.redirect('/management'))
             .catch(err => next(err))
     }
 }

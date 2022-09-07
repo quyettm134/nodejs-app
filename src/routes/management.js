@@ -6,6 +6,8 @@ router.get('/:id/edit', ManagementController.edit)
 
 router.put('/:id', ManagementController.update)
 
+router.delete('/:id', ManagementController.remove)
+
 router.get('/', ManagementController.index)
 
 module.exports = router
